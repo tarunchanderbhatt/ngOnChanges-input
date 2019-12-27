@@ -1,0 +1,11 @@
+<div class="contaner">
+  <div class="row justify-content-center">
+    <div class="col-md-6 border border-info bg-info">
+      <h1 class="text-center display-3">ng Onchange</h1>
+      <input type="text" class="form-control mb-4 mt-4" #parent (keyup)="(0)" />
+      <h2></h2>
+    </div>
+  </div>
+</div>
+
+<app-child [dataParent]="parent.value"></app-child>
