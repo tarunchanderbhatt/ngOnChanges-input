@@ -3,7 +3,15 @@
     <div class="col-md-6 border border-danger bg-danger">
       <h1 class="text-center display-3">Child</h1>
       <label class="form-control mb-4 mt-4">{{ dataParent }}</label>
-      <h2></h2>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 border border-success bg-success">
+      <h2 class="text-center display-3">Parent To Child Array</h2>
+      <ul *ngFor="let arr of arrList" class="list-group list-group-flush">
+        <li class="list-group-item">{{ arr }}</li>
+      </ul>
     </div>
   </div>
 </div>

@@ -1,11 +1,21 @@
 <div class="contaner">
   <div class="row justify-content-center">
     <div class="col-md-6 border border-info bg-info">
-      <h1 class="text-center display-3">ng Onchange</h1>
+      <h1 class="text-center display-3">Parrent Input</h1>
       <input type="text" class="form-control mb-4 mt-4" #parent (keyup)="(0)" />
       <h2></h2>
     </div>
   </div>
-</div>
 
-<app-child [dataParent]="parent.value"></app-child>
+  <div class="row justify-content-center">
+    <div class="col-md-6 border border-success bg-success">
+      <h1 class="text-center display-3">Parrent Button</h1>
+      <div class=" text-center m-2">
+        <button (click)="addValue()" class="btn btn-warning">
+          Array Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-child [dataParent]="parent.value" [arrList]="myArr"></app-child>

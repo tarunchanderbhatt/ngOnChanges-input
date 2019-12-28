@@ -8,11 +8,20 @@ import { Component, OnChanges, OnInit, Input } from "@angular/core";
 })
 export class ChildComponent implements OnInit, OnChanges {
   @Input() dataParent: string;
+  @Input() arrList: any;
   constructor() {
-    console.log("This is Constructor");
+    console.log(" Child :  Constructor ");
   }
   ngOnChanges(par: any) {
-    console.log(this.dataParent);
+    // console.log(this.dataParent);
+    // console.log(par);
+    console.log(" Child : ngOnChange ");
   }
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(" Child : ngOnInit ");
+  }
+
+  ngDoCheck() {
+    console.log(" Child : ngDoCheck ");
+  }
 }
